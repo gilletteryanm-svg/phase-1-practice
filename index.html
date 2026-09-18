@@ -2,31 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Phase 1 Practice</title>
+  <title>Developer Portfolio - Phase 1</title>
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
-      padding-top: 50px;
-      background-color: #f4f6f8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #1e293b;
     }
-    button {
-      padding: 12px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      background-color: #0070f3;
+    header, nav, main, footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    header {
+      background-color: #0f172a;
       color: white;
-      cursor: pointer;
+      text-align: center;
+      border-radius: 0 0 12px 12px;
     }
-    button:hover {
-      background-color: #0051bb;
+    nav a {
+      margin-right: 15px;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
     }
   </style>
 </head>
 <body>
-  <h1>System Online</h1>
-  <p>First local environment build complete.</p>
-  <button onclick="alert('Hello World! Script is working.')">Test Interactive Trigger</button>
+
+  <header>
+    <h1>Ryan Gillette</h1>
+    <p>Software Engineering Track | Phase 1: Foundations</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>Transitioning into full-stack web development. Currently mastering HTML structure, modern CSS layouts, and Git workflows.</p>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Current Learning Focus</h2>
+      <ul>
+        <li>Semantic HTML5 architecture</li>
+        <li>CSS Flexbox & Responsive Layouts</li>
+        <li>DOM manipulation with Vanilla JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Let's Connect</h2>
+      <p>Tracking daily builds on GitHub.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Ryan Gillette. Built in Linux on ChromeOS.</p>
+  </footer>
+
 </body>
 </html>
