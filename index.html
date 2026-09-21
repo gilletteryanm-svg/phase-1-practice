@@ -92,6 +92,12 @@
     <section id="about" class="card">
       <h2>About Me</h2>
       <p>Transitioning into full-stack web development. Currently mastering HTML structure, modern CSS layouts, and Git workflows.</p>
+      <div style="margin-top: 15px;">
+  <button id="status-btn" style="padding: 8px 16px; background-color: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">
+    Check Status
+  </button>
+  <span id="status-text" style="margin-left: 12px; font-weight: 500;">Status: Idle</span>
+</div>
     </section>
 <div class="stats-grid">
   <div class="stat-box">
@@ -125,6 +131,29 @@
   <footer>
     <p>&copy; 2026 Ryan Gillette. Built in Linux on ChromeOS.</p>
   </footer>
+<script>
+    // 1. Target the elements
+    const statusBtn = document.getElementById('status-btn');
+    const statusText = document.getElementById('status-text');
 
+    // 2. Track click count
+    let clickCount = 0;
+
+    // 3. Listen for clicks and execute changes
+    statusBtn.addEventListener('click', () => {
+      clickCount++;
+
+      if (clickCount % 2 === 1) {
+        statusText.textContent = `Status: Active Developer (Clicks: ${clickCount})`;
+        statusText.style.color = '#16a34a'; // Green
+        statusBtn.textContent = 'Reset Status';
+      } else {
+        statusText.textContent = `Status: Standby (Clicks: ${clickCount})`;
+        statusText.style.color = '#64748b'; // Gray
+        statusBtn.textContent = 'Check Status';
+      }
+    });
+  </script>
+</body>
 </body>
 </html>
